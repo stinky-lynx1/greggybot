@@ -18,7 +18,7 @@ async def on_ready():
     print(f"{bot.user.name} has declared readiness status.")
 
 @bot.event
-async def on on_connect():
+async def on_connect():
     print(f"{bot.user.name} has successfully connected to Discord. Awaiting readiness status from {bot.user.name}")
 
 @bot.command()
