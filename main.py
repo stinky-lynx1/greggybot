@@ -28,7 +28,7 @@ async def hai(ctx):
 @bot.command()
 async def greg(ctx):
     await ctx.reply('Oh, you wanna see me? Alrighty.')
-    img = discord.File('greggy/caption.jpg','gregor.png')
+    img = discord.File('greggy/caption.jpg','gregor.jpg')
     await ctx.send('here',file=img)
 
 @bot.command()
