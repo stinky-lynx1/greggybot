@@ -15,7 +15,11 @@ bot = commands.Bot(command_prefix='greg°', intents=intents)
 
 @bot.event
 async def on_ready():
-    print(f"We are ready to go in, {bot.user.name}")
+    print(f"{bot.user.name} has declared readiness status.")
+
+@bot.event
+async def on on_connect():
+    print(f"{bot.user.name} has successfully connected to Discord. Awaiting readiness status from {bot.user.name}")
 
 @bot.command()
 async def hai(ctx):
@@ -23,8 +27,9 @@ async def hai(ctx):
 
 @bot.command()
 async def greg(ctx):
-    img = discord.File('greggy/caption.png','gregor.png')
-    await ctx.send(file=img)
+    await ctx.reply('Oh, you wanna see me? Alrighty.')
+    img = discord.File('greggy/caption.jpg','gregor.png')
+    await ctx.send('here',file=img)
 
 @bot.command()
 async def backstory(ctx):
